@@ -1,6 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+int is_whitespace(char c){
+    if (c == ' ' ||
+	    c == '\n' ||
+	    c == '\r' ||
+	    c == '\t' ||
+	    c == '(') {
+	    return 1;
+		}
+		return 0;
+		
+}
+
+
+
+int fget_word(FILE* fp, char *word)
+{
+	int cnt;
+	char c;
+	
+	while ( (c = fgetc(fp)) != EOF) {
+	   if (is_whitespace (c) == 0 )
+	       break;
+    }
+    if ( c ==EOF){
+    	return 0;
+	}
+	if ( c == EOF) {
+	 return 0;
+		
+	}
+	
+	
+	cnt =0;
+	word[cnt++] = c;
+	word 
+}
+
+
+
+
+
+
+
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
